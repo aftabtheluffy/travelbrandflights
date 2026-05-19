@@ -36,7 +36,7 @@ let currentReview = 0;
 
 // Call now function
 function callNow() {
-    window.location.href = 'tel:+1-866-227-8298';
+    window.location.href = 'tel:+1-866-227-7851';
 }
 
 // Review carousel functions
