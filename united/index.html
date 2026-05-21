@@ -1,0 +1,572 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>United Airlines Flight Assistance | Booking, Changes & Cancellations</title>
+  <meta name="description" content="Get United flight help now. Call for United booking assistance, change flight support, cancellations, and emergency travel help. Direct phone support available." />
+  <meta name="keywords" content="United flight help, United change flight, United booking assistance, United cancellation support, United standby flight" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --primary: #0D6E3F;
+      --primary-dark: #095A33;
+      --primary-light: #12A85A;
+      --accent: #F59E0B;
+      --accent-light: #FCD34D;
+      --navy: #0B1D3A;
+      --navy-light: #1A3358;
+      --white: #FFFFFF;
+      --gray-50: #F9FAFB;
+      --gray-100: #F3F4F6;
+      --gray-200: #E5E7EB;
+      --gray-300: #D1D5DB;
+      --gray-500: #6B7280;
+      --gray-700: #374151;
+      --gray-900: #111827;
+      --shadow-sm: 0 1px 2px rgba(0,0,0,0.05);
+      --shadow-md: 0 4px 6px -1px rgba(0,0,0,0.1), 0 2px 4px -2px rgba(0,0,0,0.1);
+      --shadow-lg: 0 10px 15px -3px rgba(0,0,0,0.1), 0 4px 6px -4px rgba(0,0,0,0.1);
+      --shadow-xl: 0 20px 25px -5px rgba(0,0,0,0.1), 0 8px 10px -6px rgba(0,0,0,0.1);
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      color: var(--gray-900);
+      line-height: 1.6;
+      background: var(--white);
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* ========== HEADER ========== */
+    .header {
+      background: var(--navy);
+      padding: 12px 24px;
+      text-align: center;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      box-shadow: var(--shadow-md);
+    }
+
+    .disclaimer {
+      font-size: 12px;
+      color: var(--gray-300);
+      line-height: 1.4;
+      max-width: 720px;
+      margin: 0 auto;
+    }
+
+    /* ========== HERO ========== */
+    .hero {
+      background: linear-gradient(165deg, var(--navy) 0%, #0F2B52 40%, var(--primary-dark) 100%);
+      padding: 80px 24px 96px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: -50%;
+      left: -50%;
+      width: 200%;
+      height: 200%;
+      background: radial-gradient(ellipse at 70% 20%, rgba(18,168,90,0.12) 0%, transparent 60%);
+      pointer-events: none;
+    }
+
+    .hero-inner {
+      position: relative;
+      z-index: 1;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .logo-wrap {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 16px;
+      margin-bottom: 40px;
+    }
+
+    .logo-icon {
+      flex-shrink: 0;
+    }
+
+    .logo-text {
+      font-size: 28px;
+      font-weight: 800;
+      color: var(--white);
+      letter-spacing: -0.5px;
+    }
+
+    .hero h1 {
+      font-size: 44px;
+      font-weight: 800;
+      color: var(--white);
+      line-height: 1.15;
+      margin-bottom: 16px;
+      letter-spacing: -0.5px;
+    }
+
+    .hero-subtitle {
+      font-size: 18px;
+      color: rgba(255,255,255,0.82);
+      line-height: 1.6;
+      margin-bottom: 40px;
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    /* ========== CTA BUTTONS ========== */
+    .cta-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      background: var(--primary-light);
+      color: var(--white);
+      text-decoration: none;
+      padding: 20px 36px;
+      border-radius: 14px;
+      font-size: 18px;
+      font-weight: 700;
+      letter-spacing: -0.2px;
+      box-shadow: 0 4px 20px rgba(18,168,90,0.4), var(--shadow-lg);
+      transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+      cursor: pointer;
+      border: none;
+      line-height: 1.2;
+    }
+
+    .cta-btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 28px rgba(18,168,90,0.5), var(--shadow-xl);
+      background: var(--primary);
+    }
+
+    .cta-btn:active {
+      transform: translateY(0);
+    }
+
+    .cta-btn .phone-number {
+      font-weight: 800;
+      font-size: 20px;
+    }
+
+    .cta-btn-icon {
+      flex-shrink: 0;
+    }
+
+    /* ========== SERVICES ========== */
+    .services {
+      padding: 80px 24px;
+      background: var(--gray-50);
+    }
+
+    .section-inner {
+      max-width: 1080px;
+      margin: 0 auto;
+    }
+
+    .section-label {
+      display: inline-block;
+      font-size: 13px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      color: var(--primary);
+      margin-bottom: 12px;
+    }
+
+    .section-title {
+      font-size: 36px;
+      font-weight: 800;
+      color: var(--gray-900);
+      line-height: 1.2;
+      margin-bottom: 48px;
+      letter-spacing: -0.5px;
+    }
+
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 24px;
+    }
+
+    .service-card {
+      background: var(--white);
+      border-radius: 16px;
+      padding: 32px 28px;
+      box-shadow: var(--shadow-sm);
+      border: 1px solid var(--gray-200);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .service-card:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--shadow-lg);
+      border-color: var(--primary-light);
+    }
+
+    .service-icon {
+      width: 52px;
+      height: 52px;
+      border-radius: 12px;
+      background: linear-gradient(135deg, rgba(18,168,90,0.12), rgba(18,168,90,0.04));
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 20px;
+    }
+
+    .service-card h3 {
+      font-size: 18px;
+      font-weight: 700;
+      color: var(--gray-900);
+      margin-bottom: 8px;
+    }
+
+    .service-card p {
+      font-size: 15px;
+      color: var(--gray-500);
+      line-height: 1.55;
+    }
+
+    /* ========== TRUST ========== */
+    .trust {
+      padding: 80px 24px;
+      background: var(--white);
+    }
+
+    .trust-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 32px;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    .trust-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 16px;
+    }
+
+    .trust-check {
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--primary-light), var(--primary));
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+
+    .trust-item h3 {
+      font-size: 17px;
+      font-weight: 700;
+      color: var(--gray-900);
+      margin-bottom: 4px;
+    }
+
+    .trust-item p {
+      font-size: 15px;
+      color: var(--gray-500);
+      line-height: 1.5;
+    }
+
+    /* ========== FINAL CTA ========== */
+    .final-cta {
+      padding: 80px 24px;
+      background: linear-gradient(165deg, var(--navy) 0%, #0F2B52 40%, var(--primary-dark) 100%);
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .final-cta::before {
+      content: '';
+      position: absolute;
+      top: -50%;
+      left: -50%;
+      width: 200%;
+      height: 200%;
+      background: radial-gradient(ellipse at 30% 80%, rgba(18,168,90,0.1) 0%, transparent 60%);
+      pointer-events: none;
+    }
+
+    .final-cta-inner {
+      position: relative;
+      z-index: 1;
+      max-width: 640px;
+      margin: 0 auto;
+    }
+
+    .final-cta h2 {
+      font-size: 36px;
+      font-weight: 800;
+      color: var(--white);
+      line-height: 1.2;
+      margin-bottom: 16px;
+      letter-spacing: -0.5px;
+    }
+
+    .final-cta p {
+      font-size: 17px;
+      color: rgba(255,255,255,0.75);
+      margin-bottom: 36px;
+      line-height: 1.6;
+    }
+
+    .cta-btn-alt {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      background: var(--accent);
+      color: var(--gray-900);
+      text-decoration: none;
+      padding: 20px 36px;
+      border-radius: 14px;
+      font-size: 18px;
+      font-weight: 700;
+      letter-spacing: -0.2px;
+      box-shadow: 0 4px 20px rgba(245,158,11,0.4), var(--shadow-lg);
+      transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+      cursor: pointer;
+      border: none;
+      line-height: 1.2;
+    }
+
+    .cta-btn-alt:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 28px rgba(245,158,11,0.5), var(--shadow-xl);
+      background: var(--accent-light);
+    }
+
+    .cta-btn-alt .phone-number {
+      font-weight: 800;
+      font-size: 20px;
+    }
+
+    /* ========== FOOTER ========== */
+    .footer {
+      background: var(--navy);
+      padding: 32px 24px;
+      text-align: center;
+    }
+
+    .footer .disclaimer {
+      margin-bottom: 16px;
+    }
+
+    .footer-copy {
+      font-size: 12px;
+      color: var(--gray-500);
+    }
+
+    /* ========== RESPONSIVE ========== */
+    @media (max-width: 768px) {
+      .hero { padding: 56px 20px 72px; }
+      .hero h1 { font-size: 30px; }
+      .hero-subtitle { font-size: 16px; }
+      .logo-text { font-size: 22px; }
+      .section-title { font-size: 28px; }
+      .services { padding: 56px 20px; }
+      .trust { padding: 56px 20px; }
+      .final-cta { padding: 56px 20px; }
+      .final-cta h2 { font-size: 28px; }
+      .cta-btn, .cta-btn-alt { padding: 18px 28px; font-size: 16px; }
+      .cta-btn .phone-number, .cta-btn-alt .phone-number { font-size: 18px; }
+    }
+
+    @media (max-width: 480px) {
+      .hero h1 { font-size: 26px; }
+      .logo-wrap { gap: 12px; }
+      .logo-text { font-size: 20px; }
+      .cta-btn, .cta-btn-alt {
+        flex-direction: column;
+        text-align: center;
+        padding: 18px 24px;
+        width: 100%;
+        justify-content: center;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- HEADER DISCLAIMER -->
+  <header class="header">
+    <p class="disclaimer">We are an independent travel agency and are not affiliated with or endorsed by any airline.</p>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-inner">
+      <div class="logo-wrap">
+        <div class="logo-icon">
+          <svg width="56" height="56" viewBox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <!-- Airplane line logo -->
+            <path d="M8 44L24 28L44 12" stroke="#12A85A" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M8 44L22 38L24 28" stroke="#12A85A" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M44 12L38 26L24 28" stroke="#FFFFFF" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
+            <circle cx="8" cy="44" r="3" fill="#12A85A"/>
+            <circle cx="44" cy="12" r="3" fill="#FFFFFF"/>
+          </svg>
+        </div>
+        <span class="logo-text">United Assistance</span>
+      </div>
+      <h1>United Airlines Flight Assistance</h1>
+      <p class="hero-subtitle">Call now for United flight booking, changes, cancellations, and travel help.</p>
+      <a href="tel:+18663320335" class="cta-btn">
+        <svg class="cta-btn-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.362 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.338 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/>
+        </svg>
+        <span>Call United Support Now</span>
+        <span class="phone-number">(866) 332-0335</span>
+      </a>
+    </div>
+  </section>
+
+  <!-- SERVICES -->
+  <section class="services">
+    <div class="section-inner">
+      <span class="section-label">Our Services</span>
+      <h2 class="section-title">How We Help With United Flights</h2>
+      <div class="services-grid">
+        <div class="service-card">
+          <div class="service-icon">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#0D6E3F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="2" y="5" width="20" height="14" rx="2"/>
+              <path d="M2 10h20"/>
+            </svg>
+          </div>
+          <h3>United Flight Booking Help</h3>
+          <p>Get assistance finding and booking the right United flight for your travel needs and budget.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#0D6E3F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M17 1l4 4-4 4"/>
+              <path d="M3 11V9a4 4 0 0 1 4-4h14"/>
+              <path d="M7 23l-4-4 4-4"/>
+              <path d="M21 13v2a4 4 0 0 1-4 4H3"/>
+            </svg>
+          </div>
+          <h3>Ticket Change Support</h3>
+          <p>Need to change your United flight? We help with date changes, route changes, and name corrections.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#0D6E3F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="10"/>
+              <polyline points="12 6 12 12 16 14"/>
+            </svg>
+          </div>
+          <h3>Standby Flight Assistance</h3>
+          <p>Standby on an earlier or later United flight with guidance on availability and procedures.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#0D6E3F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="10"/>
+              <line x1="15" y1="9" x2="9" y2="15"/>
+              <line x1="9" y1="9" x2="15" y2="15"/>
+            </svg>
+          </div>
+          <h3>Cancellation Help</h3>
+          <p>Cancel your United flight and understand refund policies, credits, and rebooking options.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#0D6E3F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/>
+              <line x1="12" y1="9" x2="12" y2="13"/>
+              <line x1="12" y1="17" x2="12.01" y2="17"/>
+            </svg>
+          </div>
+          <h3>Emergency Travel Support</h3>
+          <p>Urgent travel situations? Get fast help with last-minute United bookings and rebooking needs.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TRUST -->
+  <section class="trust">
+    <div class="section-inner" style="text-align:center;">
+      <span class="section-label">Why Call Us</span>
+      <h2 class="section-title">Direct Help, No Hassle</h2>
+      <div class="trust-grid">
+        <div class="trust-item">
+          <div class="trust-check">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="20 6 9 17 4 12"/>
+            </svg>
+          </div>
+          <div>
+            <h3>Quick Phone Assistance</h3>
+            <p>Skip the hold times and get connected to a live agent fast.</p>
+          </div>
+        </div>
+        <div class="trust-item">
+          <div class="trust-check">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="20 6 9 17 4 12"/>
+            </svg>
+          </div>
+          <div>
+            <h3>Simple Booking Support</h3>
+            <p>We handle the details so you can focus on your trip.</p>
+          </div>
+        </div>
+        <div class="trust-item">
+          <div class="trust-check">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="20 6 9 17 4 12"/>
+            </svg>
+          </div>
+          <div>
+            <h3>No Forms, Direct Call Help</h3>
+            <p>Talk to a real person immediately. No online forms or wait screens.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FINAL CTA -->
+  <section class="final-cta">
+    <div class="final-cta-inner">
+      <h2>Speak With United Support Now</h2>
+      <p>Our agents are ready to help with your United flight needs. One call is all it takes.</p>
+      <a href="tel:+18663320335" class="cta-btn-alt">
+        <svg class="cta-btn-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.362 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.338 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/>
+        </svg>
+        <span>Call Now</span>
+        <span class="phone-number">(866) 332-0335</span>
+      </a>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <p class="disclaimer">We are an independent travel agency and are not affiliated with or endorsed by any airline.</p>
+    <p class="footer-copy">&copy; 2026 United Flight Assistance. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>
