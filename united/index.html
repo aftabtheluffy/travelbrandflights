@@ -55,6 +55,14 @@
       box-shadow: var(--shadow-md);
     }
 
+    .header-brand {
+      font-size: 14px;
+      font-weight: 700;
+      color: var(--white);
+      margin-bottom: 6px;
+      letter-spacing: -0.3px;
+    }
+
     .disclaimer {
       font-size: 12px;
       color: var(--gray-300);
@@ -126,6 +134,30 @@
       max-width: 600px;
       margin-left: auto;
       margin-right: auto;
+    }
+
+    .hero-images {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      margin-bottom: 40px;
+      flex-wrap: wrap;
+    }
+
+    .hero-image {
+      width: 280px;
+      height: 180px;
+      border-radius: 12px;
+      object-fit: cover;
+      box-shadow: 0 8px 32px rgba(0,0,0,0.3);
+      border: 2px solid rgba(255,255,255,0.1);
+    }
+
+    .hero-brand-text {
+      font-size: 16px;
+      color: rgba(255,255,255,0.9);
+      margin-bottom: 32px;
+      font-weight: 600;
     }
 
     /* ========== CTA BUTTONS ========== */
@@ -240,6 +272,14 @@
       font-size: 15px;
       color: var(--gray-500);
       line-height: 1.55;
+    }
+
+    .service-image {
+      width: 100%;
+      height: 120px;
+      border-radius: 8px;
+      object-fit: cover;
+      margin-bottom: 16px;
     }
 
     /* ========== TRUST ========== */
@@ -367,13 +407,21 @@
       text-align: center;
     }
 
+    .footer-brand {
+      font-size: 16px;
+      font-weight: 700;
+      color: var(--white);
+      margin-bottom: 12px;
+    }
+
     .footer .disclaimer {
       margin-bottom: 16px;
     }
 
     .footer-copy {
       font-size: 12px;
-      color: var(--gray-500);
+      color: var(--gray-400);
+      line-height: 1.6;
     }
 
     /* ========== RESPONSIVE ========== */
@@ -389,6 +437,7 @@
       .final-cta h2 { font-size: 28px; }
       .cta-btn, .cta-btn-alt { padding: 18px 28px; font-size: 16px; }
       .cta-btn .phone-number, .cta-btn-alt .phone-number { font-size: 18px; }
+      .hero-image { width: 100%; max-width: 320px; height: 160px; }
     }
 
     @media (max-width: 480px) {
@@ -402,6 +451,7 @@
         width: 100%;
         justify-content: center;
       }
+      .hero-images { flex-direction: column; align-items: center; }
     }
   </style>
 </head>
@@ -409,6 +459,7 @@
 
   <!-- HEADER DISCLAIMER -->
   <header class="header">
+    <div class="header-brand">TravelBrandFlights</div>
     <p class="disclaimer">We are an independent travel agency and are not affiliated with or endorsed by any airline.</p>
   </header>
 
@@ -426,10 +477,15 @@
             <circle cx="44" cy="12" r="3" fill="#FFFFFF"/>
           </svg>
         </div>
-        <span class="logo-text">United Assistance</span>
+        <span class="logo-text">TravelBrandFlights</span>
       </div>
       <h1>United Airlines Flight Assistance</h1>
       <p class="hero-subtitle">Call now for United flight booking, changes, cancellations, and travel help.</p>
+      <div class="hero-images">
+        <img src="https://images.pexels.com/photos/62623/wing-plane-sky-airplane-62623.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Airplane window view" class="hero-image" />
+        <img src="https://images.pexels.com/photos/1000653/pexels-photo-1000653.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Travel assistance support" class="hero-image" />
+      </div>
+      <p class="hero-brand-text">TravelBrandFlights - Your Trusted Travel Partner</p>
       <a href="tel:+18663320335" class="cta-btn">
         <svg class="cta-btn-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
           <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.362 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.338 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/>
@@ -564,8 +620,9 @@
 
   <!-- FOOTER -->
   <footer class="footer">
+    <div class="footer-brand">TravelBrandFlights</div>
     <p class="disclaimer">We are an independent travel agency and are not affiliated with or endorsed by any airline.</p>
-    <p class="footer-copy">&copy; 2026 United Flight Assistance. All rights reserved.</p>
+    <p class="footer-copy">&copy; 2026 TravelBrandFlights. All rights reserved. - 1270 6th Ave #15th, New York, NY 10020, United States</p>
   </footer>
 
 </body>
