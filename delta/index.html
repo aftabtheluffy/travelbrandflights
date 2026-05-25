@@ -4,13 +4,13 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="robots" content="index, follow" />
-  <title>TravelBrandFlights   Delta Flight Assistance | Book, Change &amp; Cancel Delta Flights</title>
-  <meta name="description" content="Need Delta flight help? Call now for Delta reservations, same-day flight changes, cancellations, and 24/7 travel support. Fast, direct phone assistance." />
-  <meta name="keywords" content="Delta flight help, Delta reservations, Delta change flight, Delta cancellation, Delta booking assistance, Delta flight support" />
+  <title>TravelBrandFlights - Delta Flight Assistance | Book, Change & Cancel Delta Flights</title>
+  <meta name="description" content="TravelBrandFlights: Delta flight help for reservations, same-day flight changes, cancellations, and 24/7 travel support. Fast, direct phone assistance." />
+  <meta name="keywords" content="TravelBrandFlights, Delta flight help, Delta reservations, Delta change flight, Delta cancellation, Delta booking assistance, Delta flight support" />
 
   <!-- Open Graph -->
-  <meta property="og:title" content="Delta Flight Assistance | Book, Change &amp; Cancel Delta Flights" />
-  <meta property="og:description" content="Call now for Delta flight booking, changes, cancellations, and 24/7 travel support." />
+  <meta property="og:title" content="TravelBrandFlights - Delta Flight Assistance | Book, Change & Cancel Delta Flights" />
+  <meta property="og:description" content="TravelBrandFlights provides Delta flight booking, changes, cancellations, and 24/7 travel support." />
   <meta property="og:type" content="website" />
 
   <style>
@@ -30,6 +30,9 @@
       --blue-50:  #f0f8ff;
       --green-700: #15803d;
       --green-600: #16a34a;
+      --amber-600: #d97706;
+      --amber-500: #f59e0b;
+      --amber-400: #fbbf24;
       --neutral-900: #111827;
       --neutral-700: #374151;
       --neutral-500: #6b7280;
@@ -88,6 +91,19 @@
       display: flex;
       align-items: center;
       gap: 8px;
+      flex-wrap: wrap;
+    }
+
+    .brand-primary {
+      color: var(--amber-500);
+      font-weight: 800;
+      font-size: 1.1rem;
+    }
+
+    .brand-secondary {
+      color: #bfdbfe;
+      font-size: 0.9rem;
+      font-weight: 500;
     }
 
     .header-cta {
@@ -149,6 +165,19 @@
       padding: 5px 14px;
       border-radius: 100px;
       margin-bottom: 24px;
+    }
+
+    .hero-brand {
+      display: inline-block;
+      color: var(--amber-400);
+      font-size: 0.85rem;
+      font-weight: 800;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      margin-bottom: 12px;
+      padding: 6px 14px;
+      background: rgba(245, 158, 11, 0.1);
+      border-radius: 6px;
     }
 
     .hero h1 {
@@ -447,6 +476,22 @@
       padding: 40px 24px;
       text-align: center;
     }
+
+    .footer-brand {
+      font-size: 0.9rem;
+      font-weight: 700;
+      color: var(--amber-500);
+      margin-bottom: 12px;
+      letter-spacing: 0.05em;
+    }
+
+    .footer-address {
+      font-size: 0.8rem;
+      color: #4b5563;
+      margin-bottom: 16px;
+      line-height: 1.6;
+    }
+
     .footer-disclaimer {
       font-size: 0.8rem;
       line-height: 1.7;
@@ -503,6 +548,7 @@
       .btn-primary { padding: 16px 28px; font-size: 1rem; }
       .services-grid, .trust-grid { grid-template-columns: 1fr; }
       .site-header { padding: 12px 16px; }
+      .brand-secondary { display: none; }
     }
   </style>
 </head>
@@ -518,7 +564,8 @@
   <header class="site-header" role="banner">
     <div class="brand">
       <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 16v-2l-8-5V3.5a1.5 1.5 0 0 0-3 0V9l-8 5v2l8-2.5V19l-2 1.5V22l3.5-1 3.5 1v-1.5L13 19v-5.5l8 2.5z"/></svg>
-      TravelBrandFlights   Delta Flight Assistance
+      <span class="brand-primary">TravelBrandFlights</span>
+      <span class="brand-secondary">Delta Flight Assistance</span>
     </div>
     <a href="tel:+18663320335" class="header-cta" aria-label="Call Delta support now">
       <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13 19.79 19.79 0 0 1 1.62 4.37 2 2 0 0 1 3.6 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 9.91a16 16 0 0 0 6.06 6.06l.94-.94a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
@@ -529,10 +576,11 @@
   <!-- HERO -->
   <section class="hero" aria-labelledby="hero-heading">
     <div class="hero-inner">
+      <div class="hero-brand">TravelBrandFlights</div>
       <div class="hero-badge">24/7 Travel Assistance</div>
-      <h1 id="hero-heading">TravelBrandFlights   Delta Flight Assistance</h1>
+      <h1 id="hero-heading">Delta Flight Assistance</h1>
       <p class="hero-subtitle">
-        Call now for Delta flight booking, changes, cancellations, and travel support.
+        Call TravelBrandFlights for Delta flight booking, changes, cancellations, and travel support.
         Real agents ready to help — no forms, no waiting.
       </p>
       <div class="cta-group">
@@ -559,9 +607,9 @@
   <section class="services" aria-labelledby="services-heading">
     <div class="container">
       <header class="services-header">
-        <span class="section-label">What We Help With</span>
-        <h2 id="services-heading" class="section-title">TravelBrandFlights   Delta Flight Assistance Services</h2>
-        <p class="section-desc">Phone-based support for common Delta travel needs — fast, direct, and hassle-free.</p>
+        <span class="section-label">What TravelBrandFlights Helps With</span>
+        <h2 id="services-heading" class="section-title">Delta Flight Assistance Services</h2>
+        <p class="section-desc">Phone-based support from TravelBrandFlights for common Delta travel needs — fast, direct, and hassle-free.</p>
       </header>
 
       <div class="services-grid">
@@ -570,7 +618,7 @@
           <div class="service-icon">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M17.8 19.2 16 11l3.5-3.5C21 6 21 4 19 2c-2-2-4-2-5.5-.5L10 5 1.8 6.2c-.5.1-.9.5-.9 1.1l.3 1.3c.1.4.4.7.8.8l4.9.9 2.2 4.5c.2.4.6.7 1.1.7l1.1-.1c.5-.1.9-.5.9-1l-.3-1.7"/></svg>
           </div>
-          <h3>Flight Booking Assistance</h3>
+          <h3>Delta Flight Booking Assistance</h3>
           <p>Get help booking new Delta flights, finding available routes, and securing the best travel options for your trip.</p>
           <a href="tel:+18663320335" aria-label="Call to book a Delta flight">Call to Book &rarr;</a>
         </article>
@@ -579,7 +627,7 @@
           <div class="service-icon">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="23 4 23 10 17 10"/><polyline points="1 20 1 14 7 14"/><path d="M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15"/></svg>
           </div>
-          <h3>Same-Day Flight Changes</h3>
+          <h3>Same-Day Delta Flight Changes</h3>
           <p>Need to change a Delta flight today? Our agents can help you rebook on the next available flight quickly.</p>
           <a href="tel:+18663320335" aria-label="Call to change a Delta flight same day">Call to Change Flight &rarr;</a>
         </article>
@@ -588,8 +636,8 @@
           <div class="service-icon">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><line x1="15" y1="9" x2="9" y2="15"/><line x1="9" y1="9" x2="15" y2="15"/></svg>
           </div>
-          <h3>Cancellation &amp; Refund Help</h3>
-          <p>Assistance with Delta flight cancellations, refund requests, and understanding your fare's cancellation policy.</p>
+          <h3>Delta Cancellation & Refund Help</h3>
+          <p>Assistance with Delta flight cancellations, refund requests, and understanding your Delta fare's cancellation policy.</p>
           <a href="tel:+18663320335" aria-label="Call for Delta cancellation and refund help">Call for Cancellation Help &rarr;</a>
         </article>
 
@@ -597,7 +645,7 @@
           <div class="service-icon">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
           </div>
-          <h3>Emergency Travel Support</h3>
+          <h3>Emergency Delta Travel Support</h3>
           <p>Last-minute travel emergencies require fast action. We help you navigate urgent Delta flight needs immediately.</p>
           <a href="tel:+18663320335" aria-label="Call for emergency Delta travel support">Call for Emergency Help &rarr;</a>
         </article>
@@ -606,7 +654,7 @@
           <div class="service-icon">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
           </div>
-          <h3>24/7 Reservation Assistance</h3>
+          <h3>24/7 Delta Reservation Assistance</h3>
           <p>Around-the-clock phone support for Delta reservations. No matter the time zone or travel date, we're here.</p>
           <a href="tel:+18663320335" aria-label="Call for 24/7 Delta reservation support">Call Anytime &rarr;</a>
         </article>
@@ -617,7 +665,7 @@
 
   <!-- CTA STRIP -->
   <div class="cta-strip">
-    <p>Dealing with a Delta flight issue right now? Skip the hold music — call directly.</p>
+    <p>Dealing with a Delta flight issue right now? Skip the hold music — call TravelBrandFlights directly.</p>
     <a href="tel:+18663320335" class="btn-primary" aria-label="Call Delta support now">
       <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13 19.79 19.79 0 0 1 1.62 4.37 2 2 0 0 1 3.6 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 9.91a16 16 0 0 0 6.06 6.06l.94-.94a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
       Call (866) 332-0335
@@ -628,8 +676,8 @@
   <section class="trust" aria-labelledby="trust-heading">
     <div class="container">
       <header class="trust-header">
-        <span class="section-label">Why Call Us</span>
-        <h2 id="trust-heading" class="section-title">Simple, Direct Travel Assistance</h2>
+        <span class="section-label">Why Choose TravelBrandFlights</span>
+        <h2 id="trust-heading" class="section-title">Simple, Direct Delta Flight Assistance</h2>
         <p class="section-desc">We keep things straightforward so you can focus on your travel, not on forms and wait times.</p>
       </header>
 
@@ -650,7 +698,7 @@
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
           </div>
           <div class="trust-text">
-            <h3>Simple Travel Assistance Process</h3>
+            <h3>Simple Travel Assistance</h3>
             <p>Explain your Delta flight situation and we'll walk you through every option available to you.</p>
           </div>
         </div>
@@ -680,7 +728,7 @@
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M17.8 19.2 16 11l3.5-3.5C21 6 21 4 19 2c-2-2-4-2-5.5-.5L10 5 1.8 6.2c-.5.1-.9.5-.9 1.1l.3 1.3c.1.4.4.7.8.8l4.9.9 2.2 4.5c.2.4.6.7 1.1.7l1.1-.1c.5-.1.9-.5.9-1l-.3-1.7"/></svg>
           </div>
           <div class="trust-text">
-            <h3>All Delta Routes &amp; Fares</h3>
+            <h3>All Delta Routes & Fares</h3>
             <p>Whether it's a domestic hop or an international itinerary, we help with Delta flights of all types.</p>
           </div>
         </div>
@@ -703,9 +751,9 @@
   <section class="final-cta" aria-labelledby="final-cta-heading">
     <div class="container">
       <span class="section-label" style="color:#93c5fd;">Ready to Get Help?</span>
-      <h2 id="final-cta-heading" class="section-title">Speak With Delta Support Now</h2>
+      <h2 id="final-cta-heading" class="section-title">Speak With Delta Support Through TravelBrandFlights</h2>
       <p class="section-desc">
-        Whether you need to book, change, or cancel a Delta flight — our agents are standing by to assist you right now.
+        Whether you need to book, change, or cancel a Delta flight — our agents at TravelBrandFlights are standing by to assist you right now.
       </p>
       <div class="final-cta-buttons">
         <a href="tel:+18663320335" class="btn-large btn-pulse" aria-label="Speak with Delta support now">
@@ -714,11 +762,11 @@
         </a>
         <a href="tel:+18663320335" class="btn-secondary" style="border-color:rgba(255,255,255,0.2);" aria-label="Call for Delta flight changes">
           <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="23 4 23 10 17 10"/><polyline points="1 20 1 14 7 14"/><path d="M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15"/></svg>
-          Change or cancel a flight? Call (866) 332-0335
+          Change or cancel a Delta flight? Call (866) 332-0335
         </a>
         <a href="tel:+18663320335" class="btn-secondary" style="border-color:rgba(255,255,255,0.2);" aria-label="Call for Delta reservations">
           <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M17.8 19.2 16 11l3.5-3.5C21 6 21 4 19 2c-2-2-4-2-5.5-.5L10 5 1.8 6.2c-.5.1-.9.5-.9 1.1l.3 1.3c.1.4.4.7.8.8l4.9.9 2.2 4.5c.2.4.6.7 1.1.7l1.1-.1c.5-.1.9-.5.9-1l-.3-1.7"/></svg>
-          Book a reservation: (866) 332-0335
+          Book a Delta reservation: (866) 332-0335
         </a>
       </div>
       <p class="final-note">Independent travel agency — not affiliated with or endorsed by Delta Air Lines, Inc.</p>
@@ -727,13 +775,19 @@
 
   <!-- FOOTER -->
   <footer class="site-footer" role="contentinfo">
+    <p class="footer-brand">TravelBrandFlights</p>
+    <p class="footer-address">
+      1270 6th Ave #15th<br>
+      New York, NY 10020<br>
+      United States
+    </p>
     <p class="footer-disclaimer">
       We are an independent travel agency and are not affiliated with or endorsed by any airline,
       including Delta Air Lines, Inc. Delta, SkyMiles, and related marks are trademarks of
       Delta Air Lines, Inc. All flight-related services, fares, and policies are subject to the
       airline's own terms and conditions.
     </p>
-    <p class="footer-legal">&copy; 2026 Independent Travel Assistance. All rights reserved.</p>
+    <p class="footer-legal">&copy; 2026 TravelBrandFlights. All rights reserved.</p>
   </footer>
 
   <!-- STICKY MOBILE PHONE BAR -->
